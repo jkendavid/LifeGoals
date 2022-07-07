@@ -1,0 +1,72 @@
+﻿body {
+    background-image: url('bg.jpg');
+}
+
+
+form {
+    padding: 0px 20px 20px 20px;
+}
+
+#pnlhead {
+    padding: 5px;
+    background-color: rgb(71, 71, 84);
+    border-bottom-style: solid;
+    border-color: rgba(7, 194, 4,0.7);
+}
+.headtext {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(8, 112, 46);
+    color: white;
+    margin: 0px;
+}
+
+.headtext2 {
+    padding: 0px 0px 0px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.subheadtext {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0px 0px 0px 5px;
+    color: rgb(8, 112, 46);
+}
+.subheadtext2 {
+    padding: 0px 0px 10px 10px;
+    font-size: 18px;
+}
+.row{
+    padding: 10px 20px 10px 20px;
+}
+
+.pnlgroup {
+    padding: 0px 10px 3px 10px;
+    border-style: solid;
+    border-color: rgba(7, 194, 4,0.7);
+    border-radius: 10px;
+    overflow: auto;
+    background-color: rgba(255, 255, 255,0.95);
+}
+
+.controltext {
+    font-size: 16px;
+    font-weight: 500;
+    text-align:center;
+    padding-bottom: 10px;
+}
+
+.requiredlabel:after {
+    content: " *";
+    color: red;
+}
+
+
+
+
+.input-group {
+    margin: 0 auto;
+    min-width: 240px;
+    max-width: 240px;
+}

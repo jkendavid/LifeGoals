@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Life Goals</title>
+    <link rel="icon" href="LifeGoals.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="MainStyle.css">
+</head>
+
+<body>
+    <form>
+        <div id="pnlhead" class="row fixed-top" style="margin:0px; padding:0px">
+            <div class="col-md-3">
+                <div class="headtext">Life Goals</div>
+                <div class="headtext2">Every Journey Begins at first step.</div>
+            </div>
+            <div class="row justify-content-right col-md-8 pnlgroup" style="margin: 10px 10px 10px 0px">
+
+                <div class="row col-auto">
+                    <div class="controltext requiredlabel col-auto">
+                        Date of Birth
+                    </div>
+                    <div class="col-auto">
+                        <input id="dateOfBirth" class="form-control" type="date">
+                    </div>
+                </div>
+                <div class="row col-auto">
+                    <div class="controltext requiredlabel col-auto">
+                        Birth Gender
+                    </div>
+                    <div class="col-auto">
+                        <select id="inputGender" class="form-control">
+                            <option selected></option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pnlhead2" class="row" style="margin:0px; padding:0px">
+            <div class="col-md-3">
+                <div class="headtext">Life Goals</div>
+                <div class="headtext2">Every Journey Begins at first step.</div>
+            </div>
+            <div class="row justify-content-right col-md-8 pnlgroup" style="margin: 10px 10px 10px 0px">
+                <div class="row col-auto">
+                    <div class="controltext requiredlabel col-auto">
+                        Date of Birth
+                    </div>
+                    <div class="col-auto">
+                        <input id="" class="form-control" type="date">
+                    </div>
+                </div>
+                <div class="row col-auto">
+                    <div class="controltext requiredlabel col-auto">
+                        Birth Gender
+                    </div>
+                    <div class="col-auto">
+                        <select id="" class="form-control">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="pnlgroup">
+            <div class="subheadtext">Income Protection</div>
+            <div class="subheadtext2">Securing a comportable lifestyle for my family.</div>
+            <div class="row justify-content-left col-auto border-top">
+                <div class="row col-auto">
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputMonthlyExpeses" class="numberonly form-control" type="text">
+                        </div>
+                        <div class="controltext requiredlabel">
+                            Estimated Monthly Expenses
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto align-middle">
+                        X
+                    </h5>
+                    <h5 class="col-auto align-middle">
+                        60 months
+                    </h5>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto align-middle">
+                        =
+                    </h5>
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="expeses5years" type="text" class="form-control" readonly>
+                        </div>
+                        <div class="controltext">
+                            Amount needed for atleast 5 years
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <div class="pnlgroup">
+            <div class="subheadtext">Educational Funding</div>
+            <div class="subheadtext2">Providing the best opportunities for my kids.</div>
+            <div class="row justify-content-left col-auto">
+                <table id="tblEduc" class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button class="btn-sm btn btn-primary" type="button" data-toggle="modal" data-target="#inputEducFormAdd">+</button>
+                            </th>
+                            <th style="width:300px">
+                                Name
+                            </th>
+                            <th>
+                                Birth Year
+                            </th>
+                            <th>
+                                Name of School
+                            </th>
+                            <th>
+                                Yearly Tuition Fee
+                            </th>
+                            <th>
+                                Daily Allowance
+                            </th>
+                            <th>
+                                Total Education Cost for 4 years
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="inputEducFormAdd" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add Child</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label class="requiredlabel">Child Name</label>
+                            <input id="inputEducName" class="form-control" type="text">
+                            <br />
+                            <label class="requiredlabel">Birth Year</label>
+                            <input id="inputChildBirthYear" class="form-control numberonly updateEstimatedTuitionFee" type="text">
+                            <br />
+                            <label class="requiredlabel">College</label>
+                            <select id="inputEducSchool" class="form-control updateEstimatedTuitionFee">
+                                <option selected></option>
+                            </select>
+                            <br />
+                            <label class="requiredlabel">Estimated Yearly Tuition Fee</label>
+                            <div class="input-group" style="max-width:100%">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">₱</span>
+                                </div>
+                                <input id="inputYearlyTuitionFee" class="numberonly form-control" type="text" readonly>
+                            </div>
+                            <br />
+                            <label class="requiredlabel">Estimated Daily School Allowance</label>
+                            <div class="input-group" style="max-width:100%">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">₱</span>
+                                </div>
+                                <input id="inputSchoolAllowance" class="numberonly form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="inputEducAdd" type="button" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <div class="pnlgroup">
+            <div class="subheadtext">Retirement Planning</div>
+            <div class="subheadtext2">Enjoying life without worries at retirement.</div>
+
+            <div class="row justify-content-left col-auto border-top">
+
+                <div class="row col-auto">
+                    <div class="col-auto">
+                        <input id="inputRetirementAge" class="numberonly form-control" type="text">
+                        <div class="controltext requiredlabel">
+                            Retirement Age
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        -
+                    </h5>
+                    <div class="col-auto">
+                        <input id="outputCurrentAge" class="form-control" type="text" readonly>
+                        <div class="controltext">
+                            Current Age
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        =
+                    </h5>
+                    <div class="col-auto">
+                        <input id="outputYearRetirement" class="form-control" type="text" readonly>
+                        <div class="controltext">
+                            Years before Retirement
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-left col-auto border-top">
+                <div class="row col-auto">
+                    <div class="col-auto">
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputMonthlyIncome" class="numberonly form-control updateTotalRetirementFund" type="text">
+                        </div>
+                        <div class="controltext requiredlabel">
+                            Monthly Income
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        X
+                    </h5>
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <input id="inputMonthlyIncomePercent" class="numberonly form-control updateTotalRetirementFund" type="text">
+                            <div class="input-group-append">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="controltext requiredlabel">
+                            % of Monthly Income Needed
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        X
+                    </h5>
+                    <h5 class="col-auto">
+                        12 months
+                    </h5>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        X
+                    </h5>
+
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <input id="inputRetirementYearsNeeded" class="numberonly form-control updateTotalRetirementFund" type="text">
+                        </div>
+                        <div class="controltext requiredlabel">
+                            No. of years needed
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-auto">
+                    <h5 class="col-auto">
+                        =
+                    </h5>
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="outputTotalRetirementFund" class="form-control" type="text" readonly>
+                        </div>
+                        <div class="controltext">
+                            Total Retirement Fund
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="pnlgroup">
+            <div class="subheadtext">Living with Impaired Health</div>
+            <div class="subheadtext2">Guaranteeing funds for medical needs and emergencies.</div>
+            <div class="row justify-content-left col-auto border-top">
+                <div class="row col-auto">
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputMedicalExpeses" class="numberonly form-control" type="text">
+                        </div>
+                        <div class="controltext requiredlabel">
+                            Estimated Medical Expense in case of a Critical Illness
+                        </div>
+                        <div class="controltext">
+                            (Doctor’s Fees, Surgery and Hospitalization Costs, Medicines and others)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>   <br />
+        <div class="pnlgroup">
+            <div class="subheadtext">Fund Accumulation</div>
+            <div class="subheadtext2">Preparing for large purchases in the future.</div>
+            <div class="row justify-content-left col-auto border-top">
+                <div class="row col-auto">
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">₱</span>
+                            </div>
+                            <input id="inputMonthlyExpeses" class="numberonly form-control" type="text">
+                        </div>
+                        <div class="controltext requiredlabel">
+                            Estimated Funds Needed
+                        </div>
+                        <div class="controltext">
+                            (Home Purchase, Travel, Business Venture and others)
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<script src="TuitionFee.js"></script>
+<script src="LifeGoals.js"></script>
