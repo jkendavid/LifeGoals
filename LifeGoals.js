@@ -165,3 +165,22 @@ $('form').css('padding-top', $('#pnlhead').height())
 window.onresize = function () {
     $('form').css('padding-top', $('#pnlhead').height())
 }
+
+
+
+var exportPdf = function () {
+    window.jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text(20, 20, 'Life Goals');
+
+    doc.setFontSize(12);
+    doc.text(23, 26, 'Every Journey Begins at first step.');
+
+    doc.setFontSize(12);
+    doc.text(25, 40, 'Date of Birth:');
+    doc.text(120, 40, 'Birth Gender:');
+
+    doc.save('document.pdf');
+}
