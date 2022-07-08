@@ -11,8 +11,22 @@ form {
     padding: 5px;
     background-color: rgb(71, 71, 84);
     border-bottom-style: solid;
+    border-top-style: solid;
     border-color: rgba(7, 194, 4,0.7);
 }
+
+.pnlgrouphead {
+    padding: 0px;
+    overflow: auto;
+    margin: 5px 5px 10px 5px;
+    display: flex;
+    align-items: stretch;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(18, 102, 23,0.7);
+    background-color: rgba(255, 255, 255,0.95);
+}
+
 .headtext {
     font-size: 30px;
     font-weight: 600;
@@ -33,27 +47,66 @@ form {
     padding: 0px 0px 0px 5px;
     color: rgb(8, 112, 46);
 }
+
 .subheadtext2 {
     padding: 0px 0px 10px 10px;
     font-size: 18px;
 }
-.row{
+
+.row {
     padding: 10px 20px 10px 20px;
 }
 
 .pnlgroup {
-    padding: 0px 10px 3px 10px;
+    padding: 0px;
+    margin: 5px 5px 10px 5px;
+    display: flex;
+    align-items: stretch;
+}
+
+.pnlgroupindex {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
     border-style: solid;
-    border-color: rgba(7, 194, 4,0.7);
-    border-radius: 10px;
-    overflow: auto;
+    border-color: rgba(18, 102, 23,0.3);
+    background-color: rgba(18, 102, 23,0.95);
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pnlgroupitem {
+    flex-grow: 1;
+    border-right-style: solid;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-radius: 0px 10px 10px 0px;
+    border-color: rgba(18, 102, 23,0.3);
     background-color: rgba(255, 255, 255,0.95);
+    overflow: auto;
+}
+
+.indexlabel {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+}
+
+.indextag {
+    color: white;
 }
 
 .controltext {
     font-size: 16px;
     font-weight: 500;
-    text-align:center;
+    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -64,9 +117,46 @@ form {
 
 
 
-
 .input-group {
     margin: 0 auto;
-    min-width: 240px;
-    max-width: 240px;
+    min-width: 200px;
+    max-width: 200px;
 }
+
+
+a.down, a.up {
+    flex-grow: 0;
+    margin: 5px;
+    background-color: rgba(65, 122, 48,0.9);
+}
+
+
+    a.down:hover, a.up:hover {
+        background-color: rgba(31, 59, 22,0.9);
+    }
+
+
+.up > i, .down>i {
+    color: rgba(252, 252, 252,0.9);
+}
+
+
+#pnlMain > .pnlgroup:first-child .up {
+    background-color: transparent;
+}
+
+
+    #pnlMain > .pnlgroup:first-child .up > i {
+        color: transparent;
+    }
+
+#pnlMain > .pnlgroup:last-child .down {
+    background-color: transparent;
+}
+
+
+    #pnlMain > .pnlgroup:last-child .down > i {
+        color: transparent;
+    }
+
+

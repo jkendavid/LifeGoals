@@ -130,3 +130,38 @@ var updateTotalRetirementFund = function () {
     $('#outputTotalRetirementFund').val((monthlyIncome * monthlyIncomePercentNeeded * 12 * retirementYears / 100).toLocaleString())
 }
 
+
+
+$('.up').on('click', function (e) {
+    var wrapper = $(this).closest('.pnlgroup')
+    wrapper.insertBefore(wrapper.prev()).hide().show('slow');
+    updatePriorityIndex()
+})
+$('.down').on('click', function (e) {
+    var wrapper = $(this).closest('.pnlgroup')
+    wrapper.insertAfter(wrapper.next()).hide().show('slow');
+    updatePriorityIndex()
+})
+
+var updatePriorityIndex = function () {    
+    $('#pnlMain .pnlgroup').each(function (i, v) {
+        var tag = 'th'
+        i += 1
+        if (i == 1) {
+            tag = 'st'
+        } else if (i == 2) {
+            tag = 'nd'
+        } else if (i == 3) {
+            tag = 'rd'
+        }
+        $($(v).find('.indexlabel')[0]).html(String(i) + tag)
+    });
+}
+
+updatePriorityIndex();
+
+
+$('form').css('padding-top', $('#pnlhead').height())
+window.onresize = function () {
+    $('form').css('padding-top', $('#pnlhead').height())
+}
